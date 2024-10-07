@@ -183,6 +183,12 @@
           }
         });
       document.addEventListener("DOMContentLoaded", renderUsers);
+      document.addEventListener("DOMContentLoaded", () => {
+        const currentUser = localStorage.getItem("currentUser");
+        if (currentUser) {
+          window.location.href = "/user-info";
+        }
+      });
     </script>
   </body>
 </html>
